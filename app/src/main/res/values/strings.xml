@@ -8,6 +8,8 @@
     <string name="set2">Set 2</string>
     <string name="set3">Set 3</string>
     <string name="set4">Set 4</string>
-    <string name="set5">Set 5</string>l
+    <string name="set5">Set 5</string>
+    <string name="Names">Give team names</string>
+    <string name="buttonStart">Let the game begin</string>
 
 </resources>

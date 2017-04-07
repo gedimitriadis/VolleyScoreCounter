@@ -10,4 +10,6 @@
     <string name="set5">Σετ 5</string>
     <string name="teamA">Ομάδα Α</string>
     <string name="teamB">Ομάδα Β</string>
+    <string name="Names">Δώστε τα ονόματα των ομάδων</string>
+    <string name="buttonStart">Έναρξη αγώνα</string>
 </resources>
