@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="addpoint" translatable="false">+1π</string>
+    <string name="app_name">VolleyScoreCounter</string>
+    <string name="resetAll">Καθαρισμός</string>
+    <string name="set1">Σετ 1</string>
+    <string name="set2">Σετ 2</string>
+    <string name="set3">Σετ 3</string>
+    <string name="set4">Σετ 4</string>
+    <string name="set5">Σετ 5</string>
+    <string name="teamA">Ομάδα Α</string>
+    <string name="teamB">Ομάδα Β</string>
+</resources>
