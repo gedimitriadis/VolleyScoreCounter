@@ -2,14 +2,14 @@
     <string name="app_name">VolleyScoreCounter</string>
     <string name="teamA">Team A</string>
     <string name="teamB">Team B</string>
-    <string name="resetAll">Reset All</string>
+    <string name="resetAll">Reset</string>
     <string name="addpoint" translatable="false">+1p</string>
     <string name="set1">Set 1</string>
     <string name="set2">Set 2</string>
     <string name="set3">Set 3</string>
     <string name="set4">Set 4</string>
     <string name="set5">Set 5</string>
-    <string name="Names">Give team names</string>
+    <string name="Names">Team names</string>
     <string name="buttonStart">Let the game begin</string>
 
 </resources>
