@@ -3,6 +3,7 @@ package com.example.android.volleyscorecounter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -38,21 +39,35 @@ public class MainActivity extends AppCompatActivity {
 
 
         /* get team names from StartActivity*/
-        Bundle bundle = getIntent().getExtras();
-        final String teamA = bundle.getString("teamA");
-        final String teamB = bundle.getString("teamB");
+
         teamNameA = (TextView) findViewById(R.id.textViewTeamA);
         teamNameB = (TextView) findViewById(R.id.textViewTeamB);
-        // if team names from StartActivity are empty then the names are Team A and Team B
-        if (teamA.isEmpty()){
-            teamNameA.setText("Team A");
+        final String teamA;
+        final String teamB;
+        Intent myIntent = this.getIntent();
+        if(myIntent != null) {
+            teamA = myIntent.getStringExtra("teamA");
+            teamB = myIntent.getStringExtra("teamB");
         }else{
-            teamNameA.setText(teamA);}
+            teamA = "Team A";
+            teamB = "Team B";
+            }
+        teamNameA.setText(teamA);
+        teamNameB.setText(teamB);
 
-        if (teamB.isEmpty()){
-            teamNameB.setText("Team B");
-        }else{
-            teamNameB.setText(teamB);}
+        Log.v ("Mainactivity","what happens" + teamA + teamB);
+        /*    // if team names from StartActivity are empty then the names are Team A and Team B
+            if (teamA.isEmpty()) {
+                teamNameA.setText("Team A");
+            } else {
+                teamNameA.setText(teamA);
+            }
+
+            if (teamB.isEmpty()) {
+                teamNameA.setText("Team B");
+            } else {
+                teamNameB.setText(teamB);
+            }*/
 
 
 
@@ -163,8 +178,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Log.v ("Mainactivity","what happens" + teamA + teamB);
     }
+
+
     /* sets the set score at the bottom of the screen when a set is complete */
 
     public void setFinalScores(int setCounter) {
