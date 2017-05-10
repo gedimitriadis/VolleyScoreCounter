@@ -20,57 +20,29 @@ import static com.example.android.volleyscorecounter.R.string.teamB;
 public class MainActivity extends AppCompatActivity {
 
     Button addPointA, addPointB, resetAll;
-    TextView pointsTeamA, pointsTeamB, setsTeamA, setsTeamB, score1, score2, score3, score4, score5,teamNameA,teamNameB;
+    TextView pointsTeamA, pointsTeamB, setsTeamA, setsTeamB, score1, score2, score3, score4, score5, teamNameA, teamNameB;
     int scoreTeamA = 0;
     int scoreTeamB = 0;
     int setTeamA = 0;
     int setTeamB = 0;
     int setCounter = 1;
-    String resultSet1="0 - 0";
-    String resultSet2="0 - 0";
-    String resultSet3="0 - 0";
-    String resultSet4="0 - 0";
-    String resultSet5="0 - 0";
+    String resultSet1 = "0 - 0";
+    String resultSet2 = "0 - 0";
+    String resultSet3 = "0 - 0";
+    String resultSet4 = "0 - 0";
+    String resultSet5 = "0 - 0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         /* get team names from StartActivity*/
-
         teamNameA = (TextView) findViewById(R.id.textViewTeamA);
         teamNameB = (TextView) findViewById(R.id.textViewTeamB);
-        final String teamA;
-        final String teamB;
-        Intent myIntent = this.getIntent();
-        if(myIntent != null) {
-            teamA = myIntent.getStringExtra("teamA");
-            teamB = myIntent.getStringExtra("teamB");
-        }else{
-            teamA = "Team A";
-            teamB = "Team B";
-            }
-        teamNameA.setText(teamA);
-        teamNameB.setText(teamB);
-
-        Log.v ("Mainactivity","what happens" + teamA + teamB);
-        /*    // if team names from StartActivity are empty then the names are Team A and Team B
-            if (teamA.isEmpty()) {
-                teamNameA.setText("Team A");
-            } else {
-                teamNameA.setText(teamA);
-            }
-
-            if (teamB.isEmpty()) {
-                teamNameA.setText("Team B");
-            } else {
-                teamNameB.setText(teamB);
-            }*/
-
-
-
+        final Intent myIntent = this.getIntent();
+        teamNameA.setText(myIntent.getStringExtra("teamA"));
+        teamNameB.setText(myIntent.getStringExtra("teamB"));
 
         /* Buttons*/
         addPointA = (Button) findViewById(R.id.buttonA);
@@ -94,9 +66,11 @@ public class MainActivity extends AppCompatActivity {
         addPointA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //if game is not over
                 if (setTeamA < 3 && setTeamB < 3) {
                     scoreTeamA += 1;
                     pointsTeamA.setText(String.valueOf(scoreTeamA));
+                    // if set is over
                     if (((scoreTeamA >= maxSetPoints(setCounter)) && (scoreTeamA - scoreTeamB) >= 2)) {
                         setTeamA = setTeamA + 1;
                         setsTeamA.setText(String.valueOf(setTeamA));
@@ -108,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
                         pointsTeamB.setText("0");
                     }
                 } else {
-                    //shows the winning team
-                    Toast.makeText(MainActivity.this, teamA + " wins the game", Toast.LENGTH_SHORT).show();
+                    //shows the winning team A
+                    Toast.makeText(MainActivity.this, myIntent.getStringExtra("teamA") + " wins the game", Toast.LENGTH_SHORT).show();
                     //disable buttons for adding points
                     addPointB.setClickable(false);
                     addPointA.setClickable(false);
@@ -122,9 +96,11 @@ public class MainActivity extends AppCompatActivity {
         addPointB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //if game is not over
                 if (setTeamB < 3 && setTeamA < 3) {
                     scoreTeamB += 1;
                     pointsTeamB.setText(String.valueOf(scoreTeamB));
+                    // if set is over
                     if (((scoreTeamB >= maxSetPoints(setCounter)) && (scoreTeamB - scoreTeamA) >= 2)) {
                         setTeamB = setTeamB + 1;
                         setsTeamB.setText(String.valueOf(setTeamB));
@@ -136,13 +112,12 @@ public class MainActivity extends AppCompatActivity {
                         pointsTeamB.setText("0");
                     }
                 } else {
-                    //shows the winning team
-                    Toast.makeText(MainActivity.this, teamB + " wins the game", Toast.LENGTH_SHORT).show();
+                    //shows the winning team B
+                    Toast.makeText(MainActivity.this, myIntent.getStringExtra("teamB") + " wins the game", Toast.LENGTH_SHORT).show();
                     //disable buttons for adding points
                     addPointA.setClickable(false);
                     addPointB.setClickable(false);
                 }
-
 
             }
         });
@@ -174,16 +149,12 @@ public class MainActivity extends AppCompatActivity {
                 teamNameB.setText("Team B");
                 addPointB.setClickable(true);
                 addPointA.setClickable(true);
-
             }
         });
 
-        Log.v ("Mainactivity","what happens" + teamA + teamB);
     }
 
-
     /* sets the set score at the bottom of the screen when a set is complete */
-
     public void setFinalScores(int setCounter) {
         if (setCounter == 1) {
             resultSet1 = pointsTeamA.getText().toString() + " - " + pointsTeamB.getText().toString();
@@ -202,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
             score5.setText(resultSet5);
         }
     }
+
     // sets the maximum points for a set (25 for regular and 15 for tie break)
     public int maxSetPoints(int setCounter) {
         int setPoints;
@@ -209,14 +181,10 @@ public class MainActivity extends AppCompatActivity {
             setPoints = 25;
         } else setPoints = 15;
         return setPoints;
-
     }
 
 
-    /**
-     * Save current values when rotating screen
-     */
-
+    //Save current values when rotating screen
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
@@ -231,14 +199,10 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putString("result_set3", resultSet3);
         savedInstanceState.putString("result_set4", resultSet4);
         savedInstanceState.putString("result_set5", resultSet5);
-
-
-
     }
 
-    /**
-     * Restore current values when rotating screen
-     */
+
+    //Restore current values when rotating screen
     public void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
@@ -263,11 +227,5 @@ public class MainActivity extends AppCompatActivity {
         score3.setText(resultSet3);
         score4.setText(resultSet4);
         score5.setText(resultSet5);
-
-
-
-
     }
-
-
 }

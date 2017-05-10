@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VolleyScoreCounter</string>
+    <string name="app_name">Volley Score Counter</string>
     <string name="teamA">Team A</string>
     <string name="teamB">Team B</string>
     <string name="resetAll">Reset All</string>
@@ -10,6 +10,7 @@
     <string name="set4">Set 4</string>
     <string name="set5">Set 5</string>
     <string name="Names">Team names</string>
+    <string name="imgDesc">volley court</string>
     <string name="buttonStart">Let the game begin</string>
 
 </resources>

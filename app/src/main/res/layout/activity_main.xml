@@ -12,7 +12,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context="com.example.android.volleyscorecounter.MainActivity"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="81dp">
@@ -47,9 +47,10 @@
             android:id="@+id/imageView"
             android:layout_width="0dp"
             android:layout_height="220dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginLeft="@dimen/margin8dp"
+            android:layout_marginRight="@dimen/margin8dp"
             android:scaleType="fitXY"
+            android:contentDescription="@string/imgDesc"
             android:src="@drawable/volleycourt"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -60,7 +61,7 @@
         <TextView
             android:id="@+id/textViewTeamB"
             android:layout_marginEnd="28dp"
-            android:layout_marginRight="8dp"
+            android:layout_marginRight="@dimen/margin8dp"
             android:text="@string/teamB"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -76,14 +77,14 @@
 
         <TextView
             android:id="@+id/textViewTeamA"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="@dimen/margin8dp"
             android:layout_marginStart="29dp"
             android:text="@string/teamA"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             style="@style/TextTeam"/>
 
-        l<TextView
+        <TextView
             android:id="@+id/pointsTeamA"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
@@ -181,7 +182,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/guideline5"
             app:layout_constraintRight_toLeftOf="@+id/guideline2"
             app:layout_constraintTop_toBottomOf="@+id/textViewSet1"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="@dimen/margin8dp" />
 
         <TextView
             android:id="@+id/set2Score"
@@ -190,7 +191,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/guideline2"
             app:layout_constraintRight_toLeftOf="@+id/guideline3"
             app:layout_constraintTop_toBottomOf="@+id/textViewSet2"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="@dimen/margin8dp" />
 
         <TextView
             android:id="@+id/set3Score"
@@ -198,7 +199,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/guideline3"
             app:layout_constraintRight_toLeftOf="@+id/guideline4"
             app:layout_constraintTop_toBottomOf="@+id/textViewSet3"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="@dimen/margin8dp" />
 
         <TextView
             android:id="@+id/set4Score"
@@ -207,7 +208,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/guideline4"
             app:layout_constraintRight_toLeftOf="@+id/guideline6"
             app:layout_constraintTop_toBottomOf="@+id/textViewSet4"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="@dimen/margin8dp" />
 
         <TextView
             android:id="@+id/set5Score"
@@ -216,7 +217,7 @@
             app:layout_constraintLeft_toLeftOf="@+id/guideline6"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewSet5"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="@dimen/margin8dp" />
 
         <Button
             android:id="@+id/buttonReset"
@@ -234,6 +235,5 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/set3Score"
             app:layout_constraintVertical_bias="0.272" />
-
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

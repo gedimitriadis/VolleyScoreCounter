@@ -16,9 +16,8 @@
         <item name="android:text">0</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColor">#ffffff</item>
-        <item name="android:textSize">36sp</item>
+        <item name="android:textSize">@dimen/textSize36</item>
     </style>
-
 
     <style name="TextViewPoints">
         <item name="android:layout_width">105dp</item>
@@ -27,9 +26,8 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:text">0</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">72sp</item>
+        <item name="android:textSize">@dimen/textSize72</item>
     </style>
-
 
     <style name="ButtonPoints">
         <item name="android:layout_width">wrap_content</item>
@@ -44,9 +42,9 @@
     <style name="TextTeam">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginTop">@dimen/margin8dp</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">@dimen/textSize24</item>
         <item name="android:textColor">#ffffff</item>
     </style>
 
@@ -54,12 +52,11 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">343dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin8dp</item>
+        <item name="android:layout_marginRight">@dimen/margin8dp</item>
         <item name="android:background">?android:attr/colorPressedHighlight</item>
-        <item name="android:padding">4dp</item>
+        <item name="android:padding">@dimen/padding4dp</item>
     </style>
-
 
     <style name="constraint">
         <item name="android:layout_width">wrap_content</item>
@@ -70,21 +67,20 @@
     <style name="TextViewScoreAtBottom">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginTop">@dimen/margin8dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin8dp</item>
+        <item name="android:layout_marginRight">@dimen/margin8dp</item>
         <item name="android:text">0 - 0</item>
     </style>
 
-
     <style name="EditTextTeamNames">
-        <item name="android:layout_width">368dp</item>
+        <item name="android:layout_width">340dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">8dp</item>
-        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin16dp</item>
+        <item name="android:layout_marginRight">@dimen/margin16dp</item>
         <item name="android:textColor">?android:attr/colorPressedHighlight</item>
         <item name="android:ems">10</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/textSize18</item>
     </style>
 
 </resources>
