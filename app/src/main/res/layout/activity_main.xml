@@ -236,4 +236,5 @@
             app:layout_constraintTop_toBottomOf="@+id/set3Score"
             app:layout_constraintVertical_bias="0.272" />
     </android.support.constraint.ConstraintLayout>
+
 </ScrollView>
