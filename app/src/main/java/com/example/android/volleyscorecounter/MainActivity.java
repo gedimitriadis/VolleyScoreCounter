@@ -19,8 +19,20 @@ import static com.example.android.volleyscorecounter.R.string.teamB;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button addPointA, addPointB, resetAll;
-    TextView pointsTeamA, pointsTeamB, setsTeamA, setsTeamB, score1, score2, score3, score4, score5, teamNameA, teamNameB;
+    Button addPointA;
+    Button addPointB;
+    Button resetAll;
+    TextView pointsTeamA;
+    TextView pointsTeamB;
+    TextView setsTeamA;
+    TextView setsTeamB;
+    TextView score1;
+    TextView score2;
+    TextView score3;
+    TextView score4;
+    TextView score5;
+    TextView teamNameA;
+    TextView teamNameB;
     int scoreTeamA = 0;
     int scoreTeamB = 0;
     int setTeamA = 0;

@@ -15,7 +15,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:text">0</item>
         <item name="android:textAlignment">center</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">@color/colorWhite</item>
         <item name="android:textSize">@dimen/textSize36</item>
     </style>
 
@@ -36,7 +36,7 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display2</item>
         <item name="android:text">@string/addPoint</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 
     <style name="TextTeam">
@@ -45,7 +45,7 @@
         <item name="android:layout_marginTop">@dimen/margin8dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">@dimen/textSize24</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">@color/colorWhite</item>
     </style>
 
     <style name="TextViewSetsAtBottom">
